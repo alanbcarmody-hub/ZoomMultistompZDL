@@ -162,6 +162,8 @@ function checkCab(c,m){need(c&&Array.isArray(c.fir)&&c.fir.length===m.taps&&Arra
 function cabName(value){const name=String(value).trim();need(/^[a-zA-Z0-9][a-zA-Z0-9_-]{0,7}$/.test(name),'Use 1-8 letters, numbers, hyphens or underscores for the cab name.');return name;}
 // C<2-digit slot><up to 5 chars of name>.ZDL -- at most 8 characters and unique
 // per slot: the pedal truncates basenames to 8 and freezes on duplicates.
+// The pedal shows at most 9 characters (stock names); 'CAB-' + 8 broke its screen (issue #5).
+function pedalName(name){return 'CAB-'+cabName(name).slice(0,5);}
 function fileName(slot,name){return 'C'+String(slot).padStart(2,'0')+cabName(name).slice(0,5)+'.ZDL';}
 async function fillCab(template,manifest,slot,cab,name){
  need(manifest.format===2&&manifest.taps===TAPS&&manifest.biquads===NBQ&&Array.isArray(manifest.slots),'Unsupported cab engine template.');
@@ -175,9 +177,9 @@ async function fillCab(template,manifest,slot,cab,name){
  cab.fir.forEach((x,i)=>v.setFloat32(fo+4*i,x,true));
  cab.sos.forEach((r,j)=>r.forEach((x,k)=>v.setFloat32(so+4*(5*j+k),x,true)));
  v.setFloat32(go,cab.gain,true);
- out.fill(0,no,no+12);out.set(new TextEncoder().encode('CAB-'+name),no);
+ out.fill(0,no,no+12);out.set(new TextEncoder().encode(pedalName(name)),no);
  return {bytes:out,report:{engine:manifest.engine,version:manifest.output_version,slot,fxid:s.fxid,filename:fileName(slot,name),
-  displayName:'CAB-'+name,name:'CabIR-'+name,source:cab.source||'',fitRmsDb:cab.errorDb,fitWorstDb:cab.worstDb,sha256:await sha256(out),engineSha256:s.sha256}};
+  displayName:pedalName(name),name:'CabIR-'+name,source:cab.source||'',fitRmsDb:cab.errorDb,fitWorstDb:cab.worstDb,sha256:await sha256(out),engineSha256:s.sha256}};
 }
 // The browser's cabs: each keeps its slot for life (removing frees it; the
 // next cab added takes the lowest free one), so patches never change cab.
@@ -186,6 +188,6 @@ function readCabs(storage){try{const b=JSON.parse(storage.getItem(CABS_KEY)||'[]
 function saveCabs(storage,cabs){storage.setItem(CABS_KEY,JSON.stringify(cabs));}
 function freeSlot(cabs,max){for(let s=1;s<=max;s++)if(!cabs.some(c=>c.slot===s))return s;return 0;}
 
-const api={parseWav,resample48,prepare,fit,fillCab,fileName,cabName,responseDb,peak,lowpass,highpass,readCabs,saveCabs,freeSlot,CABS_KEY,TAPS,NBQ};
+const api={parseWav,resample48,prepare,fit,fillCab,fileName,cabName,pedalName,responseDb,peak,lowpass,highpass,readCabs,saveCabs,freeSlot,CABS_KEY,TAPS,NBQ};
 if(typeof module!=='undefined')module.exports=api;else root.CabLoader=api;
 })(globalThis);

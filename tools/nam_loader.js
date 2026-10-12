@@ -69,6 +69,12 @@ function namFxid(slot){return slot<=8?899+slot:941+slot;}
 function shortName(value){
  const name=String(value).trim();need(/^[a-zA-Z][a-zA-Z0-9_-]{0,7}$/.test(name),'Use 1–8 letters, numbers, hyphens or underscores for the short name, starting with a letter.');return name;
 }
+// The name the PEDAL shows. Stock effect names are at most 9 characters and
+// the field is 12 bytes; 'NAM-' + 8 filled it with no terminator and broke the
+// pedal's screen (issue #5). Patch Editor and filenames keep the full name.
+const PEDAL_NAME_CHARS=5;
+function pedalName(name){return 'NAM-'+shortName(name).slice(0,PEDAL_NAME_CHARS);}
+function samePedalName(a,b){return a.slice(0,PEDAL_NAME_CHARS).toLowerCase()===b.slice(0,PEDAL_NAME_CHARS).toLowerCase();}
 function patchId(fxid){return (((fxid&63)<<17)|(((fxid>>6)&1)<<30)|(((fxid>>7)&7)<<8)|(8<<1))>>>0;}
 function readRegistry(storage){
  try{const entries=JSON.parse(storage.getItem(REGISTRY_KEY)||'[]');return Array.isArray(entries)?entries.filter(e=>Number.isInteger(e.slot)&&e.slot>=1&&e.slot<=NAM_SLOTS&&/^[a-zA-Z0-9][a-zA-Z0-9_-]{0,7}$/.test(e.shortName)):[];}catch{return [];}
@@ -76,6 +82,7 @@ function readRegistry(storage){
 function remember(storage,report){
  const entries=readRegistry(storage).filter(e=>e.slot!==report.slot);
  need(!entries.some(e=>e.shortName.toLowerCase()===report.shortName.toLowerCase()),'That short name belongs to another capture slot. Choose a different name.');
+ need(!entries.some(e=>samePedalName(e.shortName,report.shortName)),'Another capture slot already shows as '+pedalName(report.shortName)+' on the pedal. Change the first '+PEDAL_NAME_CHARS+' letters.');
  entries.push(report);storage.setItem(REGISTRY_KEY,JSON.stringify(entries));
 }
 // The pedal cuts ZDL basenames to 8 characters, and two installed files whose
@@ -92,10 +99,10 @@ async function convertNamed(model,template,manifest,slot,name){
  need(selected&&selected.fxid===namFxid(slot)&&selected.id===patchId(selected.fxid),'Invalid capture identity.');
  const result=await convert(model,template,{...manifest,...selected,format:1});
  const at=selected.name_offset;need(Number.isInteger(at)&&at>=76&&at+12<=result.bytes.length,'Invalid display name offset.');
- const display='NAM-'+name;result.bytes.fill(0,at,at+12);result.bytes.set(new TextEncoder().encode(display),at);
+ const display=pedalName(name);result.bytes.fill(0,at,at+12);result.bytes.set(new TextEncoder().encode(display),at);
  Object.assign(result.report,{slot,fxid:selected.fxid,id:selected.id,shortName:name,displayName:display,name:'NAMLite-'+name,filename:fileName(slot,name),sha256:await sha256(result.bytes),note:'Only replaces the chosen capture slot. Other capture slots and original NAMLite are unchanged. Multiple simultaneous models may exceed pedal DSP capacity.'});
  return result;
 }
-const api={selectModel,reorder,convert,convertNamed,shortName,fileName,patchId,namFxid,NAM_SLOTS,readRegistry,remember,REGISTRY_KEY,sha256};
+const api={selectModel,reorder,convert,convertNamed,shortName,pedalName,samePedalName,PEDAL_NAME_CHARS,fileName,patchId,namFxid,NAM_SLOTS,readRegistry,remember,REGISTRY_KEY,sha256};
 if(typeof module!=='undefined')module.exports=api;else root.NAMLoader=api;
 })(globalThis);

@@ -71,3 +71,10 @@ test('slots: a cab keeps its slot; removing frees it for the next one',()=>{
  const after=C.readCabs(storage).filter(c=>c.slot!==2);assert.equal(C.freeSlot(after,16),2);
  assert.equal(C.freeSlot(Array.from({length:16},(_,i)=>({slot:i+1})),16),0);
 });
+
+test('cab pedal names stay within 9 characters and keep the full name for Patch Editor',async()=>{
+ const r=C.fit(synthCab(),{start:'staged'}),s=manifest.slots[0];
+ const {bytes,report}=await C.fillCab(tpl(1),manifest,1,{...r},'tonehunt');
+ assert.equal(report.displayName,'CAB-toneh');assert.equal(report.name,'CabIR-tonehunt');
+ assert.equal(bytes[s.name_offset+9],0);
+});

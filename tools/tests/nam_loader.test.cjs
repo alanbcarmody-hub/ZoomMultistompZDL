@@ -37,11 +37,11 @@ test('eight distinct named exports preserve DSP, linkage and original NAM identi
  for(const slot of multi.slots){
   const engine=fs.readFileSync(path.join(base,'nam_template',slot.file));
   const r=await api.convertNamed(model(),engine,multi,slot.slot,'smokey');
-  assert.equal(r.report.filename,'NAM'+slot.slot+(slot.slot<10?'smok':'smo')+'.ZDL');filenames.add(r.report.filename);assert.equal(r.report.displayName,'NAM-smokey');
+  assert.equal(r.report.filename,'NAM'+slot.slot+(slot.slot<10?'smok':'smo')+'.ZDL');filenames.add(r.report.filename);assert.equal(r.report.displayName,'NAM-smoke');
   assert.equal(Buffer.from(r.bytes).readUInt16LE(64),api.namFxid(slot.slot));assert.equal(slot.fxid,slot.slot<=8?899+slot.slot:941+slot.slot);
   assert.notEqual(r.report.fxid,498);identities.add(r.report.id);
   const end=r.bytes.slice(slot.name_offset,slot.name_offset+12);
-  assert.equal(Buffer.from(end).toString().replace(/\0/g,''),'NAM-smokey');
+  assert.equal(Buffer.from(end).toString().replace(/\0/g,''),'NAM-smoke');
   const allowed=i=>(i>=slot.weights_offset&&i<slot.weights_offset+1871*4)||(i>=68&&i<76)||(i>=slot.name_offset&&i<slot.name_offset+12);
   for(let i=0;i<engine.length;i++)if(!allowed(i))assert.equal(r.bytes[i],engine[i]);
  }
@@ -73,4 +73,17 @@ test('registry retains other slots and prevents duplicate filenames',()=>{
  assert.equal(api.readRegistry(storage).find(e=>e.slot===2).shortName,'mega');
  assert.throws(()=>api.remember(storage,{slot:3,shortName:'MEGA'}));
  assert.equal(api.readRegistry(storage).length,2);
+});
+
+test('pedal names fit the pedal screen: at most 9 characters, NUL-terminated, unique on the pedal',async()=>{
+ const slot=multi.slots[0],engine=fs.readFileSync(path.join(base,'nam_template',slot.file));
+ for(const name of ['a','smoke44','tonehunt','Z-9_abcd']){
+  const r=await api.convertNamed(model(),engine,multi,slot.slot,name),field=Buffer.from(r.bytes.slice(slot.name_offset,slot.name_offset+12));
+  assert.ok(r.report.displayName.length<=9,r.report.displayName);assert.equal(field[r.report.displayName.length],0,'terminated');
+  assert.equal(r.report.name,'NAMLite-'+name,'Patch Editor keeps the full name');
+ }
+ const data=new Map(),storage={getItem:k=>data.get(k),setItem:(k,v)=>data.set(k,v)};
+ api.remember(storage,{slot:1,shortName:'smoke44'});
+ assert.throws(()=>api.remember(storage,{slot:2,shortName:'smokeco'}),/already shows as NAM-smoke/);
+ api.remember(storage,{slot:2,shortName:'smoky'});api.remember(storage,{slot:1,shortName:'smoke45'});
 });

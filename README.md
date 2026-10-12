@@ -23,12 +23,18 @@ Zoom Effect Manager installs the effects. See the [installation guide](docs/INST
 * **Compatible family, awaiting confirmation:** **MS-50G, MS-60B, G1on,
   G1Xon, B1on and B1Xon**. Custom effects and Patch Editor compatibility on these
   models is awaiting confirmation from users.
-* **Not supported:** **MS-100BT**, the **Plus models** (**MS-50G+, MS-60B+
-  and MS-70CDR+**) and the **Four series** (**G1/G1X Four, B1/B1X Four,
-  A1/A1X Four**). The Plus and Four pedals use Zoom's newer ZD2 effect format,
-  so ZDL files don't load on them. See [Compatibility](#compatibility) below.
-  MS-100BT owners: [MS StompCtrl](https://github.com/1njected/ms-stompctrl) is a
-  browser editor and backup tool for that pedal (see [Related projects](#related-projects)).
+* **Works with third-party tools:** **MS-100BT**. It has no USB MIDI, so
+  Effect Manager and Patch Editor can't reach it; effects go on over Bluetooth
+  with [lopezchau's MS-100BT tools](https://github.com/lopezchau/zoom-ms100bt-bluetooth)
+  or [MS StompCtrl](https://github.com/1njected/ms-stompctrl). A user confirmed
+  Shatter, Galactic, Microloom and Spool running
+  ([#4](https://github.com/themanro/ZoomMultistompZDL/issues/4)); NAM and CabIR
+  are untested there.
+* **Not supported:** the **Plus models** (**MS-50G+, MS-60B+ and MS-70CDR+**)
+  and the **Four series** (**G1/G1X Four, B1/B1X Four, A1/A1X Four**). They use
+  Zoom's newer ZD2 effect format, so ZDL files don't load on them. See
+  [Compatibility](#compatibility) below and the
+  [pedal research notes](docs/pedal-research/README.md).
 
 ## Custom NAM captures and cabinets (experimental)
 
@@ -292,6 +298,7 @@ More detailed install notes live in [docs/INSTALLING-ZDLS.md](docs/INSTALLING-ZD
 |---|---|
 | Zoom MS-70CDR firmware 2.10 | Primary hardware target; the release effects are developed and play-tested against this pedal. |
 | Other ZDL-based Zoom pedals (MS-50G, MS-60B, G1on/G1Xon, B1on/B1Xon) | Compatible family, awaiting confirmation — hardware reports welcome. |
+| Zoom MS-100BT | Custom effects confirmed by a user, installed over Bluetooth with third-party tools ([#4](https://github.com/themanro/ZoomMultistompZDL/issues/4)). No USB MIDI, so no Effect Manager or Patch Editor. NAM/CabIR untested. |
 | Original G3/G3X, G5, B3 and A3 | Share the ZFX-IV DSP family, but this project's custom effects and Patch Editor are not currently supported or validated on them. |
 | Newer Zoom ZD2-based pedals (Plus models; G1/G1X, B1/B1X and A1/A1X Four; G3n, G5n, B3n, AC-2/AC-3) | Not supported by these ZDL builds. ZD2 and ZDL effects are not interchangeable ([Zoom Firmware Editor](https://github.com/Barsik-Barbosik/Zoom-Firmware-Editor) lists which pedal uses which; the A1 Four is assumed ZD2 like the rest of the Four series). |
 
@@ -548,13 +555,14 @@ them beside the repo, treat them as read-only references.
 | [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) | Hardware-test asks and contribution notes. |
 | [build/ABI.md](build/ABI.md) | Low-level linker/runtime ABI reference for developers. |
 | [docs/TI-PDF-NOTES.md](docs/TI-PDF-NOTES.md) + TI PDFs | TI C6000 toolchain references. |
+| [docs/pedal-research/](docs/pedal-research/README.md) | What's known about every other Zoom pedal people ask about: effect format, install path, IDs, risks and the next safe experiment. |
 | [docs/PROBING-A-NEW-PEDAL.md](docs/PROBING-A-NEW-PEDAL.md) | How to find out whether a pedal this project has never seen — the `+` models especially — is analysable, talks MIDI, and hands over patches. |
 
 ## Related projects
 
 | Project | What it is |
 |---|---|
-| [MS StompCtrl](https://github.com/1njected/ms-stompctrl) | Browser-only patch editor and backup tool for the **MS-100BT**, over Bluetooth in Chrome ([open it](https://1njected.github.io/ms-stompctrl/)). Reads, edits and writes patches, backs up the bank, and installs `.ZDL` files. Effects from this repo are untested on the MS-100BT, so back up first and report what you find. MIT. |
+| [MS StompCtrl](https://github.com/1njected/ms-stompctrl) | Browser-only patch editor and backup tool for the **MS-100BT**, over Bluetooth in Chrome ([open it](https://1njected.github.io/ms-stompctrl/)). Reads, edits and writes patches, backs up the bank, and installs `.ZDL` files. A user has run four of this repo's effects on the MS-100BT ([#4](https://github.com/themanro/ZoomMultistompZDL/issues/4)); back up first and report what you find. MIT. |
 | [MIDISTOMP](https://github.com/matujuice/zoom-ms-midistomp) | Custom firmware for the original MultiStomps: MIDI Program Change, CC control of every knob, MIDI clock with Start/Stop, a tap-tempo screen and footswitch-hold options. Installed by flashing a modified Zoom updater (riskier than an Effect Manager install). Tested on an MS-60B running MS-50G 3.10; MS-50G and MS-70CDR untested. MIT. |
 | [Matujuice ZDL effects pack](https://github.com/matujuice/zoom-ms-zdl-effects-pack) | Free custom effects built on this toolchain, made for synths and drum machines: wavefolder, pitch shifters, a pitch-tracked choir, Euclidean gate, dub siren, glitch, scrub/freeze, distortion, pump, delay, sweep. Release v1.5 has its own Tempo knobs; v1.6 and later follow MIDISTOMP's tempo (120 BPM on stock firmware). Its effect IDs 480, 490 and 496 overlap an old Howl ID and two of our test probes, so don't install those alongside it. MIT. |
 | [repeat98/ZoomMultistompZDL](https://github.com/repeat98/ZoomMultistompZDL) | The upstream ZDL toolchain this fork started from. |

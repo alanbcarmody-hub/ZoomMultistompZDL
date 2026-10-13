@@ -6,7 +6,7 @@ from, and the next safe experiment. Facts marked *unverified* come from a single
 community claim or our own inference.
 
 **Short answer.** The original MultiStomps are close: the MS-100BT already runs
-four of our effects, and the MS-50G reads with our patch layout. The "+"
+four of our effects, and a user runs NAM and CabIR on an MS-50G. The "+"
 MultiStomps are the most promising new platform: same DSP family, unencrypted
 effect files, and custom C effects already proven by another project. The
 older G3/G5/B3 need firmware patching nobody has done.
@@ -16,7 +16,7 @@ older G3/G5/B3 need firmware patching nobody has done.
 | Pedal | Effect format | Install path | Our effects | Patch Editor | NAM | Next step |
 |---|---|---|---|---|---|---|
 | MS-70CDR | ZDL | Effect Manager | **working** | **working** | **working** | (home platform) |
-| MS-50G | ZDL | Effect Manager | untested on hardware | reads OK; experimental writes shipped | untested | Testers run the write test and install one effect ([#1](https://github.com/themanro/ZoomMultistompZDL/issues/1)) |
+| MS-50G | ZDL | Effect Manager | **NAM + CabIR confirmed** by a user ([#5](https://github.com/themanro/ZoomMultistompZDL/issues/5)) | reads OK; experimental writes shipped | **working** (full rate and Eco) | Run the write test; check DSP headroom with a cab ([#5](https://github.com/themanro/ZoomMultistompZDL/issues/5)) |
 | MS-100BT | ZDL | Bluetooth only (third-party tools) | **4 confirmed** by a user | no (no USB MIDI) | untested | Ask [#4](https://github.com/themanro/ZoomMultistompZDL/issues/4) to try NAM + CabIR |
 | MS-60B | ZDL | Effect Manager | untested on stock firmware; runs custom effects on MS-50G firmware | no: 105-byte, 4-slot patches | untested; flash space tight | Map the 105-byte layout; find an owner |
 | G1on / G1Xon / B1on / B1Xon | ZDL | Effect Manager | one failure report upstream | no: different IDs, 5 slots | unknown DSP budget | First hardware report |
@@ -29,8 +29,8 @@ older G3/G5/B3 need firmware patching nobody has done.
 
 ## Priorities
 
-1. **MS-50G**: closest to done. Same OS family, patch layout already matches.
-   Needs one owner to run the write test and install a small effect.
+1. **MS-50G**: effects and NAM confirmed on firmware 3.10 (#5). Left: the
+   Patch Editor write test, and whether its DSP headroom matches the MS-70CDR.
 2. **MS-100BT**: already runs our effects through
    [lopezchau's tools](https://github.com/lopezchau/zoom-ms100bt-bluetooth).
    Next: NAM and CabIR there, then a README update (it currently says "not

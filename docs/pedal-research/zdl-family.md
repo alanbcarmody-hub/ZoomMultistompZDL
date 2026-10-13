@@ -11,7 +11,7 @@ Last researched 2026-10-12.
 | Pedal | Released | Latest firmware | SysEx ID | Slots | Patch dump | Install | Custom effects seen |
 |---|---|---|---|---|---|---|---|
 | MS-70CDR | ~2013 *(unverified)* | 2.10 | 0x61 | 6 | 146 B | Effect Manager | ours (home) |
-| MS-50G | 2012 | 3.10 | 0x58 | 6 | 146 B | Effect Manager | none reported yet |
+| MS-50G | 2012 | 3.10 | 0x58 | 6 | 146 B | Effect Manager | **NAM (full rate + Eco) and CabIR** |
 | MS-60B | 2013 | 2.10 | 0x5F | 4 | 105 B | Effect Manager | Matujuice pack, on MS-50G firmware |
 | MS-100BT | 2012 | 1.30 | 0x5E | 6 | 140 B + CRC (Bluetooth) | Bluetooth tools only | **Shatter, Galactic, Microloom, Spool**, WaveFold, DubSiren |
 | G1on | 2013 | 1.21 | 0x63 | 5 | ~102 B *(inferred)* | Effect Manager, firmware editor | one failure report |
@@ -42,12 +42,15 @@ flash from [MIDISTOMP models/](https://github.com/matujuice/zoom-ms-midistomp/tr
 
 ## MS-50G
 
-- **Status:** patch dumps decode with our MS-70CDR layout
+- **Status:** **NAM at full rate, NAM Eco and CabIR work** on an MS-50G with
+  firmware 3.10 (identity `f0 7e 00 06 02 52 58 00 00 00 33 2e 31 30 f7`;
+  [#5](https://github.com/themanro/ZoomMultistompZDL/issues/5), 2026-10-13).
+  Patch dumps decode with our MS-70CDR layout
   ([#1](https://github.com/themanro/ZoomMultistompZDL/issues/1)); Patch Editor
-  has an opt-in write test since c58e9e4. No owner has reported back yet.
-- **Effects:** same OS family and 6 slots, so our effects should load. Untested.
-- **NAM:** plenty of flash (300 free blocks). DSP budget unmeasured.
-- **Next:** an owner runs the write test, then installs one small effect, then NAM.
+  has an opt-in write test since c58e9e4, not yet run by an owner.
+- **NAM:** plenty of flash (300 free blocks). Whether full rate + a cab leaves
+  the same headroom as on the MS-70CDR is asked in #5.
+- **Next:** the write test; then the DSP headroom answer.
 
 ## MS-60B
 

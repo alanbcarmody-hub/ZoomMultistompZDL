@@ -20,9 +20,13 @@ Zoom Effect Manager installs the effects. See the [installation guide](docs/INST
 **Pedal compatibility:**
 
 * **Tested:** original **MS-70CDR (firmware 2.10)**—custom effects and Patch Editor.
-* **Compatible family, awaiting confirmation:** **MS-50G, MS-60B, G1on,
-  G1Xon, B1on and B1Xon**. Custom effects and Patch Editor compatibility on these
-  models is awaiting confirmation from users.
+* **Confirmed by a user:** **MS-50G (firmware 3.10)**: NAM captures (full
+  rate and Eco) and CabIR work ([#5](https://github.com/themanro/ZoomMultistompZDL/issues/5)).
+  Patch Editor reads it; writing is opt-in and experimental
+  ([#1](https://github.com/themanro/ZoomMultistompZDL/issues/1)).
+* **Compatible family, awaiting confirmation:** **MS-60B, G1on, G1Xon, B1on
+  and B1Xon**. Custom effects and Patch Editor compatibility on these models
+  is awaiting confirmation from users.
 * **Works with third-party tools:** **MS-100BT**. It has no USB MIDI, so
   Effect Manager and Patch Editor can't reach it; effects go on over Bluetooth
   with [lopezchau's MS-100BT tools](https://github.com/lopezchau/zoom-ms100bt-bluetooth)
@@ -297,7 +301,8 @@ More detailed install notes live in [docs/INSTALLING-ZDLS.md](docs/INSTALLING-ZD
 | Device family | Status |
 |---|---|
 | Zoom MS-70CDR firmware 2.10 | Primary hardware target; the release effects are developed and play-tested against this pedal. |
-| Other ZDL-based Zoom pedals (MS-50G, MS-60B, G1on/G1Xon, B1on/B1Xon) | Compatible family, awaiting confirmation — hardware reports welcome. |
+| Zoom MS-50G firmware 3.10 | NAM (full rate and Eco) and CabIR confirmed by a user ([#5](https://github.com/themanro/ZoomMultistompZDL/issues/5)). Patch Editor reads it; writes are opt-in and experimental. |
+| Other ZDL-based Zoom pedals (MS-60B, G1on/G1Xon, B1on/B1Xon) | Compatible family, awaiting confirmation — hardware reports welcome. |
 | Zoom MS-100BT | Custom effects confirmed by a user, installed over Bluetooth with third-party tools ([#4](https://github.com/themanro/ZoomMultistompZDL/issues/4)). No USB MIDI, so no Effect Manager or Patch Editor. NAM/CabIR untested. |
 | Original G3/G3X, G5, B3 and A3 | Share the ZFX-IV DSP family, but this project's custom effects and Patch Editor are not currently supported or validated on them. |
 | Newer Zoom ZD2-based pedals (Plus models; G1/G1X, B1/B1X and A1/A1X Four; G3n, G5n, B3n, AC-2/AC-3) | Not supported by these ZDL builds. ZD2 and ZDL effects are not interchangeable ([Zoom Firmware Editor](https://github.com/Barsik-Barbosik/Zoom-Firmware-Editor) lists which pedal uses which; the A1 Four is assumed ZD2 like the rest of the Four series). |

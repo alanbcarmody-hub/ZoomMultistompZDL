@@ -16,7 +16,7 @@ older G3/G5/B3 need firmware patching nobody has done.
 | Pedal | Effect format | Install path | Our effects | Patch Editor | NAM | Next step |
 |---|---|---|---|---|---|---|
 | MS-70CDR | ZDL | Effect Manager | **working** | **working** | **working** | (home platform) |
-| MS-50G | ZDL | Effect Manager | **NAM + CabIR confirmed** by a user ([#5](https://github.com/themanro/ZoomMultistompZDL/issues/5)) | reads OK; experimental writes shipped | **working** (full rate and Eco) | Run the write test; check DSP headroom with a cab ([#5](https://github.com/themanro/ZoomMultistompZDL/issues/5)) |
+| MS-50G | ZDL | Effect Manager | **NAM + CabIR confirmed** by a user ([#5](https://github.com/themanro/ZoomMultistompZDL/issues/5)) | **write test passed**; save, backup and restore worked | **working** (full rate and Eco); same headroom as MS-70CDR | Confirm knob edits; identify the unknown effect `0x200004` ([#5](https://github.com/themanro/ZoomMultistompZDL/issues/5)) |
 | MS-100BT | ZDL | Bluetooth only (third-party tools) | **4 confirmed** by a user | no (no USB MIDI) | untested | Ask [#4](https://github.com/themanro/ZoomMultistompZDL/issues/4) to try NAM + CabIR |
 | MS-60B | ZDL | Effect Manager | untested on stock firmware; runs custom effects on MS-50G firmware | no: 105-byte, 4-slot patches | untested; flash space tight | Map the 105-byte layout; find an owner |
 | G1on / G1Xon / B1on / B1Xon | ZDL | Effect Manager | one failure report upstream | no: different IDs, 5 slots | unknown DSP budget | First hardware report |
@@ -29,8 +29,9 @@ older G3/G5/B3 need firmware patching nobody has done.
 
 ## Priorities
 
-1. **MS-50G**: effects and NAM confirmed on firmware 3.10 (#5). Left: the
-   Patch Editor write test, and whether its DSP headroom matches the MS-70CDR.
+1. **MS-50G**: effects, NAM and Patch Editor writes confirmed on firmware
+   3.10 (#5); DSP headroom matches the MS-70CDR. Left: confirm knob edits, and
+   add one MS-50G stock effect missing from the database.
 2. **MS-100BT**: already runs our effects through
    [lopezchau's tools](https://github.com/lopezchau/zoom-ms100bt-bluetooth).
    Next: NAM and CabIR there, then a README update (it currently says "not

@@ -46,11 +46,17 @@ flash from [MIDISTOMP models/](https://github.com/matujuice/zoom-ms-midistomp/tr
   firmware 3.10 (identity `f0 7e 00 06 02 52 58 00 00 00 33 2e 31 30 f7`;
   [#5](https://github.com/themanro/ZoomMultistompZDL/issues/5), 2026-10-13).
   Patch dumps decode with our MS-70CDR layout
-  ([#1](https://github.com/themanro/ZoomMultistompZDL/issues/1)); Patch Editor
-  has an opt-in write test since c58e9e4, not yet run by an owner.
-- **NAM:** plenty of flash (300 free blocks). Whether full rate + a cab leaves
-  the same headroom as on the MS-70CDR is asked in #5.
-- **Next:** the write test; then the DSP headroom answer.
+  ([#1](https://github.com/themanro/ZoomMultistompZDL/issues/1)).
+- **Patch Editor writes:** the opt-in write test **passed** on the same pedal
+  (146/146 bytes identical, 2026-10-14); saving a patch and backing up and
+  restoring all 50 banks worked. Knob edits to be confirmed.
+- **DSP:** same as the MS-70CDR. Patch Editor's meter read 85% for NAM alone
+  and 89% for NAM + cab, both clean; adding a chorus was fine; adding a delay
+  crackled (the pedal accepted it, but that delay costs more than it declares).
+  Eco should leave room for a delay.
+- **Unknown effect:** a stock effect shows as `0x200004` (filter group, ID 16)
+  and isn't in our database; probably MS-50G-only. Name asked in #5.
+- **Next:** confirm knob edits; add the missing effect.
 
 ## MS-60B
 

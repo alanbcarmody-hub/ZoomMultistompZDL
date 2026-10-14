@@ -3500,6 +3500,57 @@
    "cover": "A///////////////////gAP//////////////////4ADqqqqqqqqqqqqqqqqqquAA1VVUAAAFAAAVAAAVQFVgAOqqqM7uqrk7qrboqp4q4ADVVVSopKUqkhU+RRU/VWAA6qgoruTqu5OqqkIqnirgANVTlKiEpTKSFSJFFT9VYADqpkjOhKqqk6qi6Kq/KuAA1VfUAAAFAAAVAAAVHlVgAOqmSqP8KqP8KqP8Kp4q4ADVVtVPnxVPnxVPnxU/VWAA6qKKngeKngeKngeKjCrgANVTlTmZxTmZxTmZxU1VYADoAqp3nuJ3nuJ3nuKsquAA0/6U759075907591TVVgAORiqt+fst+fst+fsqyq4ADVfpTfn7Tfn7Tfn7VNVWAA5Waq3/+y3/+y3/+yrKrgANVilO//dO//dO//dU1VYADlaqp3/uJ3/uJ3/uKsquAA1WKVOfnFOfnFOfnFTVVgAMVCip4Hip4Hip4Hiqyq4ADf/uFP/xVP/xVP/xVNVWAA34Kqo/wqo/wqo/wqDCrgANxiuVAAAVABVVABVH+FYADdfuqqg/yqqqqqqqn/4uAA3WKpVR/+VVVVVVVTDDFgAN/iuqo/hqqqqqqqpgwa4ADf/ulVeQRVVVVVVUQMCWAA2AKqqkMcqoKCqqqIDATgANgCuVUP8AEZNVVVWAwGYADf/uqqv8A8OnKqqpAMAuAAxX7hVRjg7Fi1VFVQDAJgAOViioAwcZyRIKkqkAwC4ADVYpU8cHs7JkZTVVwMDmAA5Wqqf3/z3/v2qyAeAB7gANVilMGfwZjx4lNHRsDYYADlYqmAAAAAAAKrDyLh0uAA1MaV2AAEDgACAxtSwNVgAOZ7qPxjDj93AuMfIoBS4ADTApTG9zxzN3PzPlaAWWAA6f6p7DcwZj/zmzwFPyjgANT+k7g9ePw785t4mT8mYADqAocAOb9hO5M7cLMAM2AA1VZXAbmDYzubc3GgAAFgAOqmQ4cxnj4zG8MxIAABYADVTCH+MbwD+B+DPyAAAWAA6pgQ/BGAD/4AAh8wPwNgANQwCHgAAA4OAAAOECECYADo4AYD///85///4JghBuAA1cABUAAAOfOAAAFYHgZgAOn//yf///MZ///8jB4M4ADU//5QAAA2DYAAAUceOWAA6gAAp///9g3///yj//LgAPVVVVAAADMZgAABUP/F4AB6qqqn///58////KoAC8AAPVVVUAAAHOcAAAFVVVeAAB6qqqf///4P///8qqqvAAAPVVVQAAAH/AAAAVVVXgAAB6qqqqqqq/qqqqqqqrwAAAP////////////////4AAAB////////////////8AAAAP///////////////+AAA=="
   },
   {
+   "name": "Ba GEQ",
+   "fxid": 24,
+   "gid": 2,
+   "category": "Filter",
+   "id": 3145732,
+   "params": [
+    {
+     "name": "50Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "120Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "400Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "500Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "800Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "4.5kHz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "10kHz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "Level",
+     "max": 150,
+     "default": 100
+    }
+   ],
+   "cost": 27.12,
+   "cover": "AAD///////////////4AAAABwAAAAAAAAAAAAAAHAAAAA5//////////////84AAAAO///////////////uAAAADP////////////gD5gAAAAz////////////wAeYAAAAM+AOAOAOAOAOAMAHmAAAADP+/+/+/+/+/+/AB5gAAAAz/v/v/v/v/v/v4A+YAAAAM/g/g/g/g/g/g///mAAAADP+/+/+/+/+/+/+/5gAAAAz/v/v/v/v/v/v/v+YAAAAM/g/g/g/g/g/g/g/mAAAADP+/+/+/+/+/+/+/5gAAAAz/v/v/v/v/v/v/v+YAAAAM/g///////////g/mAAAADP+/gDgDgDgDgD+/5gAAAAz/vwAQAQAQAQAfv+YAAAAM8AEAEAEAEAEAEAHmAAAADP+/ABABABABAB+/5gAAAAz/v4A4A4A4A4A/v+YAAAAM/g///////////g/mAAAAPP+/+/+/+/+/+/+/54AAADz/v/v/v/v/v/v/v+eAAAAs/g/g/g/g/g/g/g/mgAAALP+/+/+/+/+/+/+/5oAAACz/v/v/v/v/v/v/v+aAAAAs///g/g/g/g/g/g/mgAAALPgD+/+/+/+/+/+/5oAAACzwAfv/v/v/v/v/v+aAAAA88AGAOAOAOAOAOAPngAAAPPAB////////////54AAAAz4A////////////+YAAAAM///////////////mAAAADP//////////////5gAAAAwAAAAAAAAAAAAAAAYAAAAMgAAAAAAAAAAAAAAmAAAADL//////////////pgAAAAy//////////////6YAAAAMP/////////////+GAAAADP//////////////5gAAAAz//////////////+YAAAAM/////////x+f///mAAAADOB///4///+fn8Dj5gAAAAzzP//83///n//myeYAAAAM8zDnOdFDE5MY55zmAAAADPNuSln4uYmJk2Wc5gAAAAzw/k55+fmZmZPhnOYAAAAM8zBnOQnBmZmT5ZzmAAAADPMmc5mZmZmZk+ec5gAAAAzzJlKcmZmZmZFmyeYAAAAM4HEnPhDEgwkIwOPmAAAADP///////5/////85gAAAAz///////+f/////+YAAAAM////////D//////mAAAADP//////////////5gAAAAz//////////////+YAAAAO///////////////mAAAADn//////////////zgAAAA8//////////////54AAAAHgAAAAAAAAAAAAAA8AAAAB////////////////AAAAAP///////////////gAAAAAAAAAAAAAAAAAAAAAAAA=="
+  },
+  {
    "name": "Ba Metal",
    "fxid": 144,
    "gid": 20,
@@ -6819,6 +6870,52 @@
    "cover": "AAAAAAAAAAAAAAAAAAAAAAAAAAAf4P8H+D/B/gAAAAAAAAAAP/H/j/x/4/8AAAAAAAAAAD/x/4/8f+P/AAAAAAAAAAA/8f+P/H/j/wAAAAAAAABv///////////9gAAAAAAAb////////////YAAAAAAAG/Gxb+ItH7iov2AAAAAAABv3Wy/2pX+7q79gAAAAAAAb9RtP9qkfuKi/YAAAAAAAG/Vbb/atf7urv2AAAAAAABvxUW/2LR+I2I9gAAAAAAAb////////////YAAAAAAAG////////////2AAAAAAABv/AP/+Af/8A/9gAAAAAAAb/AA/+AB/8AD/YAAAAAAAG/j/H/H+P+P8f2AAAAAAABvzmc/nM5/OZz9gAAAAAAAb5hhnzDDPmGGfYAAAAAAAG8wYM5gwZzBgz2AAAAAAABvMGDOYMGcwYM9gAAAAAAAbzAAzmABnMADPYAAAAAAAG8wAM5gAZzAAz2AAAAAAAPvMADOYAGcwAM98AAAAAAD75gBnzADPmAGffAAAAAAA2/OBz+cDn84HP2wAAAAAANv4/x/x/j/j/H9sAAAAAADb/AA/+AB/8AD/bAAAAAAA2/8A//4B//wD/2wAAAAAANv///////////9sAAAAAADb////////////bAAAAAAA+AAAAAAAAAAAAHwAAAAAAPv///////////98AAAAAAAb////////////YAAAAAAAG////////////2AAAAAAABv////+Af////9gAAAAAAAb////+AB/////YAAAAAAAG/////H+P////2AAAAAAABv////nA5////9gAAAAAAAb////zgHP////YAAAAAAAG////5z85////2AAAAAAABv///+Z/mf///9gAAAAAAAb////mf5n////YAAAAAAAG////5n+Z////2AAAAAAABv///+c/Of///9gAAAAAAAb////zgHP////YAAAAAAAG////+cDn////2AAAAAAABv////z/j////9gAAAAAAAb////+AB/////YAAAAAAAG/////4B/////2AAAAAAABv4P/////////9gAAAAAAAb8B//////////YAAAAAAAG/Of/////////2AAAAAAABvzmDOYMxI4Mx9gAAAAAAAb8/ATkBIQEBIfYAAAAAAAG/Pzk5OQcZOQf2AAAAAAABvyE5OQEfOTkf9gAAAAAAAb8hOTkBHzk5H/YAAAAAAAG/OTkRPz85OT/2AAAAAAABvwEBgwE/OQE/9gAAAAAAAb+Dg8eDPzmDP/YAAAAAAAG////////////2AAAAAAABv///////////9gAAAAAAAb////////////YAAAA=="
   },
   {
+   "name": "GraphicEQ",
+   "fxid": 16,
+   "gid": 2,
+   "category": "Filter",
+   "id": 2097156,
+   "params": [
+    {
+     "name": "160Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "400Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "800Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "3.2kHz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "6.4kHz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "12kHz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "Level",
+     "max": 150,
+     "default": 100
+    }
+   ],
+   "cost": 16.21,
+   "cover": "AAAA/////////////+AAAAAAAcAAAAAAAAAAAABwAAAAAAOf////////////OAAAAAADv////////////7gAAAAAAz//////////4A+YAAAAAAM//////////8AHmAAAAAADPgDgDgDgDgDAB5gAAAAAAz/v/v/v/v/vwAeYAAAAAAM/7/7/7/7/7+APmAAAAAADP4P4P4P4P4P//5gAAAAAAz/v/v/v/v/v/v+YAAAAAAM/7/7/7/7/7/7/mAAAAAADP4P4P4P4P4P4P5gAAAAAAz/v/v/v/v/v/v+YAAAAAAM/7/7/7/7/7/7/mAAAAAADP4P////////4P5gAAAAAAz/v4A4A4A4A/v+YAAAAAAM/78AEAEAEAH7/mAAAAAADPABABABABABAB5gAAAAAAz/vwAQAQAQAfv+YAAAAAAM/7+AOAOAOAP7/mAAAAAADP4P////////4P5gAAAAADz/v/v/v/v/v/v+eAAAAAA8/7/7/7/7/7/7/ngAAAAALP4P4P4P4P4P4P5oAAAAACz/v/v/v/v/v/v+aAAAAAAs/7/7/7/7/7/7/mgAAAAALP//4P4P4P4P4P5oAAAAACz4A/v/v/v/v/v+aAAAAAAs8AH7/7/7/7/7/mgAAAAAPPABgDgDgDgDgD54AAAAADzwAf/////////+eAAAAAAM+AP//////////mAAAAAADP////////////5gAAAAAAz////////////+YAAAAAAMAAAAAAAAAAAAAGAAAAAADIAAAAAAAAAAAAJgAAAAAAy////////////6YAAAAAAMoAAAAAAAAAAACmAAAAAADCAAAAAAAAAAAAhgAAAAAAzAAAAAAAAAAAAGYAAAAAAMh/wAAD//A///wmAAAAAADI//AAD//4f//+JgAAAAAAyeF4AB4/POAODiYAAAAAAMnefAA/Pz/zzOcmAAAAAADJn3///z//8+nzJgAAAAAAyZ////8///N58yYAAAAAAMmf4McHDjDwefMmAAAAAADJn/KTkyck83nzJgAAAAAAyZwz85MnJ/P58yYAAAAAAMmec8OTJyfz6fMmAAAAAADJ3nOTkycm88znJgAAAAAAyeDhgYYiEeAODyYAAAAAAMj///+f/////58mAAAAAADIf///n/////+fJgAAAAAAyAAAD58AAAADwyYAAAAAAMgAAAcOAAAAAf8mAAAAAADsAAAD/AAAAAD+ZgAAAAAA5gAAAAAAAAAAAM4AAAAAAPP///////////+eAAAAAAB4AAAAAAAAAAAAPAAAAAAAf/////////////wAAAAAAD/////////////4AAAAAAAAAAAAAAAAAAAAAAAAA=="
+  },
+  {
    "name": "GrayComp",
    "fxid": 144,
    "gid": 1,
@@ -9938,6 +10035,103 @@
    ],
    "cost": 30.43,
    "cover": "AAAAAAAAAAAAAAAAAAAAAAAAAG////////////2AAAAAAABv///////////9gAAAAAAAb////////////YAAAAAAAG////////////2AAAAAAABvxsW/iLR+4qL9gAAAAAAAb91sv9qV/u6u/YAAAAAAAG/UbT/apH7iov2AAAAAAABv1W2/2rX+7q79gAAAAAAAb8VFv9i0fiNiPYAAAAAAAG////////////2AAAAAAABv/AP/+Af/8A/9gAAAAAAAb/AA/+AB/8AD/YAAAAAAAG/j/H/H+P+P8f2AAAAAAABvzmc/nM5/OZz9gAAAAAAAb5hhnzDDPmGGfYAAAAAAAG8wYM5gwZzBgz2AAAAAAABvMGDOYMGcwYM9gAAAAAAAbzAAzmABnMADPYAAAAAAAG8wAM5gAZzAAz2AAAAAAABvMADOYAGcwAM9gAAAAAAAb5gBnzADPmAGfYAAAAAAAG/OBz+cDn84HP2AAAAAAAPv4/x/x/j/j/H98AAAAAAD7/AA/+AB/8AD/fAAAAAAA2/8A//4B//wD/2wAAAAAANv///////////9sAAAAAADb////////////bAAAAAAA2////////////2wAAAAAANv+AAAAAAAAA/9sAAAAAADb/v////////v/bAAAAAAA+/7wf//////7/3wAAAAAAPv+4D//////+/98AAAAAAAb/uc/////5/v/YAAAAAAAG/7n8CcwcOZ7/2AAAAAAABv+5+AnICBke/9gAAAAAAAb/uBnJycmYPv/YAAAAAAAG/7wICcgJmH7/2AAAAAAABv+/zAnICZh+/9gAAAAAAAb/uc/JifmYPv/YAAAAAAAG/7gPyAgICR7/2AAAAAAABv+8H8xMHEmO/9gAAAAAAAb/v////////v/YAAAAAAAG/4AAAAAAAAD/2AAAAAAABv///////////9gAAAAAAAb////////////YAAAAAAAG/////4B/////2AAAAAAABv////4AH////9gAAAAAAAb////8f4/////YAAAAAAAG////+cDn////2AAAAAAABv////OAc////9gAAAAAAAb////nPzn////YAAAAAAAG////5n+Z////2AAAAAAABv///+Z/mf///9gAAAAAAAb////mf5n////YAAAAAAAG////5z85////2AAAAAAABv////OAc////9gAAAAAAAb////5wOf////YAAAAAAAG/////P+P////2AAAAAAABv////4AH////9gAAAAAAAb/////gH/////YAAAAAAAG////////////2AAAAAAABv///////////9gAAAAAAAb////////////YAAAA=="
+  },
+  {
+   "name": "St Bs GEQ",
+   "fxid": 256,
+   "gid": 2,
+   "category": "Filter",
+   "id": 516,
+   "params": [
+    {
+     "name": "50Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "120Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "400Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "500Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "800Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "4.5kHz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "10kHz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "Level ",
+     "max": 150,
+     "default": 100
+    }
+   ],
+   "cost": 40.68,
+   "cover": "AA/////////////////gAAAcAAAAAAAAAAAAAAAAcAAAGP///////////////jAAABn///////////////8wAAAZ8AeAPAHgDwB4A8AfMAAAGf9/+//f/v/3/7/9/zAAABn/f/v/3/7/9/+//f8wAAAZ/B/g/wf4P8H+D/B/MAAAGf9/+//f/v/3/7/9/zAAABn/f/v/3/7/9/+//f8wAAAZ/B/g/wf4P8H+D/B/MAAAGf9/+//f/v/3/7/9/zAAABn/f/v/3/7/9/+//f8wAAAZ////////////////MAAAGfAHgDwB4A8AeAPAHzAAABngAwAYAMAGADABgA8wAAAZ4AMAGADABgAwAYAPMAAAGeADABgAwAYAMAGADzAAABnwB4A8AeAPAHgDwB8wAAAZ////////////////MAAAGf9/+//f/v/3/7/9/zAAABn/f/v/3/7/9/+//f8wAAAZ/B/g/wf4P8H+D/B/MAAAGf9/+//f/v/3/7/9/zAAABn/f/v/3/7/9/+//f8wAAAZ/B/g/wf4P8H+D/B/MAAAGf9/+//f/v/3/7/9/zAAABn/f/v/3/7/9/+//f8wAAAZ8AeAPAHgDwB4A8AfMAAAGf///////////////zAAABj///////////////4wAAB8AAAAAAAAAAAAAAAAfAAAf/////////////////wAAF/////////////////0AABf/gf///wD//+AAAP/9AAAX/zw///9+f//PP55//QAAF/9kgAEHMwABmZizP/0AABf/c9vsc7M53bAZYb/9AAAX/zm1mtu+G3WwH22//QAAH/8dvZ7bszmZs9lhv/8AAB//TbGY2zNa7ZmYsz//AAAH/3ndznN+f7nPv55//AAAB/8AAAAHAAAD4AAHP/wAAB//////////////87//AAAf//////////////g//wAAF4AAAAAAAAAAAAAAAD0AABd////////////////dAAAW///////wAf//////7QAAFv//////5/z//////+0AABb//////8xGf//////tAAAW///////Z83//////7QAAHv//////0gl//////+8AAB7//////9QFf//////vAAAG///////cB3//////7AAABv//////1AV//////+wAAAb//////9IJf//////sAAAG///////Z83//////7AAABv//////zEZ//////+wAAAb//////+f8///////sAAAG///////wAf//////7AAAB3///////////////9wAAAeAAAAAAAAAAAAAAAA8AAAH/////////////////AAAA/////////////////gAA=="
+  },
+  {
+   "name": "St Gt GEQ",
+   "fxid": 224,
+   "gid": 2,
+   "category": "Filter",
+   "id": 1077936388,
+   "params": [
+    {
+     "name": "160Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "400Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "800Hz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "3.2kHz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "6.4kHz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "12kHz",
+     "max": 24,
+     "default": 12
+    },
+    {
+     "name": "Level ",
+     "max": 150,
+     "default": 100
+    }
+   ],
+   "cost": 35.5,
+   "cover": "AA/////////////////gAAAcAAAAAAAAAAAAAAAAcAAAGP///////////////jAAABn///////////////8wAAAZ/AH4A/AH4A/AH4A/MAAAGf/f/7//f/7//f/7/zAAABn/3/+//3/+//3/+/8wAAAZ/wf+D/wf+D/wf+D/MAAAGf/f/7//f/7//f/7/zAAABn/3/+//3/+//3/+/8wAAAZ/wf+D/wf+D/wf+D/MAAAGf/f/7//f/7//f/7/zAAABn/3/+//3/+//3/+/8wAAAZ////////////////MAAAGfwB+APwB+APwB+APzAAABn4APAB4APAB4APAB8wAAAZ+ADwAeADwAeADwAfMAAAGfgA8AHgA8AHgA8AHzAAABn8AfgD8AfgD8AfgD8wAAAZ////////////////MAAAGf/f/7//f/7//f/7/zAAABn/3/+//3/+//3/+/8wAAAZ/wf+D/wf+D/wf+D/MAAAGf/f/7//f/7//f/7/zAAABn/3/+//3/+//3/+/8wAAAZ/wf+D/wf+D/wf+D/MAAAGf/f/7//f/7//f/7/zAAABn/3/+//3/+//3/+/8wAAAZ/AH4A/AH4A/AH4A/MAAAGf///////////////zAAABj///////////////4wAAB4AAAAAAAAAAAAAAAAPAAAeA/AAAAPwPAAB//34DwAAFgYeAAAGGCeAAwwHDA0AABYE2//3zM/+//ZmdmYNAAAWBGEgnGnpIGAU9mzyDQAAFgYyUykp+STydP4M8g0AABYHEhMJKYkk4kTCbPINAAAWBZJzOSzJJNJmZnZmDQAAHgQxEYxmCCRCIwQHDA8AAB4H////w////+H//cYPAAAGAAAAAAAAAAAAAABiDAAABgAAAAAAAAAAAAAAPgwAAB//////////////////AAAf/////////////////wAAF4AAAAAAAAAAAAAAAD0AABd////////////////dAAAW///////wAf//////7QAAFv//////5/z//////+0AABb//////8xGf//////tAAAW///////Z83//////7QAAHv//////0gl//////+8AAB7//////9QFf//////vAAAG///////cB3//////7AAABv//////1AV//////+wAAAb//////9IJf//////sAAAG///////Z83//////7AAABv//////zEZ//////+wAAAb//////+f8///////sAAAG///////wAf//////7AAAB3///////////////9wAAAeAAAAAAAAAAAAAAAA8AAAH/////////////////AAAA/////////////////gAA=="
   },
   {
    "name": "StdSyn",

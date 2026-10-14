@@ -49,14 +49,19 @@ flash from [MIDISTOMP models/](https://github.com/matujuice/zoom-ms-midistomp/tr
   ([#1](https://github.com/themanro/ZoomMultistompZDL/issues/1)).
 - **Patch Editor writes:** the opt-in write test **passed** on the same pedal
   (146/146 bytes identical, 2026-10-14); saving a patch and backing up and
-  restoring all 50 banks worked. Knob edits to be confirmed.
+  restoring all 50 banks worked, and knob edits are heard on the pedal.
 - **DSP:** same as the MS-70CDR. Patch Editor's meter read 85% for NAM alone
-  and 89% for NAM + cab, both clean; adding a chorus was fine; adding a delay
-  crackled (the pedal accepted it, but that delay costs more than it declares).
-  Eco should leave room for a delay.
-- **Unknown effect:** a stock effect shows as `0x200004` (filter group, ID 16)
-  and isn't in our database; probably MS-50G-only. Name asked in #5.
-- **Next:** confirm knob edits; add the missing effect.
+  and 89% for NAM + cab, both clean; adding a chorus or the stock Delay was
+  fine (an earlier crackle turned out to be the audio interface clipping).
+- **Graphic EQ** (`0x200004`) was missing from our database: its band names
+  use the pedal's "Hz" glyph (byte `0x1F`), which the DB builder rejected.
+  Fixed; all GEQ variants now load.
+- **Bug: stock amps' CAB knob can't move in Patch Editor.** In Zoom's amp
+  files the CAB parameter has no maximum; its default is a packed effect
+  reference (e.g. `0x04000140`, group 4 / ID 320). The real range isn't in the
+  amp file. Needs two patch dumps from an MS-50G with the cab changed on the
+  pedal.
+- **Next:** the amp CAB dumps.
 
 ## MS-60B
 

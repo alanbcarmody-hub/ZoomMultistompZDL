@@ -47,9 +47,12 @@ def _walk_descriptor(data: bytes, off: int):
         if len(e) < 0x30:
             return None
         raw = e[:10].split(b"\0")[0]
-        if any(c < 0x20 or c > 0x7E for c in raw):
+        # 0x1F is a glyph in the pedal's font: Graphic EQ names its bands
+        # "160\x1f" ... "12k\x1f", i.e. "160Hz" ... "12kHz". Rejecting it
+        # dropped every GEQ from the DB, so PE showed it as an unknown id (#5).
+        if any((c < 0x20 and c != 0x1F) or c > 0x7E for c in raw):
             return None                     # non-printable name: not a table
-        nm = raw.decode("ascii")
+        nm = raw.replace(b"\x1f", b"Hz").decode("ascii")
         maxv, = struct.unpack_from("<I", e, 0x0C)
         defv, = struct.unpack_from("<I", e, 0x10)
         flags, = struct.unpack_from("<I", e, 0x2C)

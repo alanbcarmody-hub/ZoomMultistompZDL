@@ -209,7 +209,7 @@ pedal actually shows.
 | **Flower** | Rate, Mix | Korg-style random sample-and-hold step filter — the "Digital Bath" sound |
 | **Shatter** | Chance, Mix | stutter / beat-repeat glitch for drums |
 | **Arrakis** | Detune, Mix | Dune-style detuned sub-octave drone, two subs beating against each other |
-| **Corrupt** | Sub, Tone, Wave, Mix | EQD Data Corrupter-style PLL square synth with tracked sub and divided harmony |
+| **Corrupt** | Master, Sub, Harm, Rate, Depth, Mix | Data Corrupter-inspired PLL square synth with octave selection, tracked harmony, and FM modulation |
 | **Klang** | Freq, Sweep, Mix | swept-carrier ring modulator — sirens, dive bombs, clangorous metal |
 | **GenLoss** | Wow, Tone, Hiss, Mix | tape/VHS generation loss: wow, head-bump tone shift, hiss |
 | **Scorch** | Gain, Mix | aggressive high-gain amp with a cab-style filter (cab baked as biquads, not an FIR) |

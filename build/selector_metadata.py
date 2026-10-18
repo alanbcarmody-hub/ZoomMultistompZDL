@@ -19,6 +19,10 @@ def groups(labels, classify, maximum=100):
     return result
 
 SELECTORS={
+ 'Corrupt':{
+   'Master':groups(['Unis','-1Oct','-2Oct'],lambda r:ladder(r,[.25,.75])),
+   'Harm':groups(['Unis','5th','Oct','4th','-Oct','12th'],lambda r:ladder(r,[.17,.34,.5,.67,.84])),
+ },
  'Tonic':{
    'Mode':groups(['Decim','Crush','FM','Ring'],lambda r:ladder(r,[.25,.5,.75])),
    'Order':groups(['Fwd','Rev'],lambda r:ladder(r,[.5])),

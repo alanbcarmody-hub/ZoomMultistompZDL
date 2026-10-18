@@ -8,8 +8,9 @@ Airwindows-derived ports plus one contributed effect (Dustbox). All are grouped
 under the **Delay** category with a custom on-device cover, and all have rebuilt release binaries in `dist/`.
 
 > **Updated September 14, 2026:** all 22 effects have individual laboratory-style
-> graphics, LCD proportion corrections, and short pedal labels. Saved effect IDs
-> and parameter ranges are preserved. See [display notes](docs/EFFECT-DISPLAY-REFRESH.md).
+> graphics, LCD proportion corrections, and short pedal labels. Effect IDs stay
+> stable; Corrupt's control map is explicitly expanded to six controls. See
+> [display notes](docs/EFFECT-DISPLAY-REFRESH.md).
 
 ### Every effect ends with Mix
 
@@ -34,6 +35,12 @@ crossfade. Those are by-ear calibration points, not derived constants.
 * The desktop Python renderers are alternate listening references. Their extra
   controls and algorithms can differ from the reduced pedal versions; they are
   not evidence that a feature exists in the shipped ZDL.
+* Corrupt is a Data Corrupter-inspired approximation: Master selects unison,
+  -1 octave, or -2 octaves; Sub sets the divided voice level; Harm selects a
+  tracked interval; and Rate/Depth modulate that harmony. The pedal version
+  fixes the root mode to Unison and omits the independent Square voice and the
+  hardware's eight subharmonic programs. Existing Corrupt patches made with
+  the former Sub/Tone/Wave/Mix map may need their settings retuned.
 * Some features are deferred on the originals (Klang's frequency-shifter modes,
   GenLoss dropouts, Scorch's full cab IR). Compare each effect's `manifest.json`
   against its `manifest_pedal.json` to see what was cut for the pedal build.
@@ -159,7 +166,7 @@ loudness.
 | Flower | [flower.wav](previews/audio/flower.wav) — Digital Bath random filter | [chord](previews/audio/dry_chord.wav) |
 | Shatter | [shatter.wav](previews/audio/shatter.wav) — machine-gun stutter | [drums](previews/audio/dry_drums.wav) |
 | Arrakis | [arrakis.wav](previews/audio/arrakis.wav) — −2 oct beating drone | [drone](previews/audio/dry_drone.wav) |
-| Corrupt | [corrupt.wav](previews/audio/corrupt.wav) — PLL square synth | [guitar](previews/audio/dry_guitar.wav) |
+| Corrupt | [corrupt.wav](previews/audio/corrupt.wav) — PLL square synth with FM harmony | [guitar](previews/audio/dry_guitar.wav) |
 | Klang | [klang.wav](previews/audio/klang.wav) — metallic ring mod | [chord](previews/audio/dry_chord.wav) |
 | GenLoss | [genloss.wav](previews/audio/genloss.wav) — wrecked tape | [chord](previews/audio/dry_chord.wav) |
 | Scorch | [scorch.wav](previews/audio/scorch.wav) — djent high-gain amp+cab | [riff](previews/audio/dry_riff.wav) |

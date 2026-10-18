@@ -48,6 +48,15 @@ class Selectors(unittest.TestCase):
   db=json.loads((ROOT/'tools/effects_db.json').read_text())
   effect=next(e for e in db['custom'] if e['name']=='Space2')
   self.assertEqual([p['name'] for p in effect['params']],['Fifth','Decay','Tone','Mix'])
+ def test_corrupt_pll_controls_and_pitch_selectors(self):
+  db=json.loads((ROOT/'tools/effects_db.json').read_text())
+  effect=next(e for e in db['custom'] if e['name']=='Corrupt')
+  self.assertEqual([p['name'] for p in effect['params']],
+                   ['Master','Sub','Harm','Rate','Depth','Mix'])
+  self.assertEqual([c['label'] for c in effect['params'][0]['choices']],
+                   ['Unis','-1Oct','-2Oct'])
+  self.assertEqual([c['label'] for c in effect['params'][2]['choices']],
+                   ['Unis','5th','Oct','4th','-Oct','12th'])
  def test_rooms6_matches_actual_dsp_selector(self):
   src=(ROOT/'src/custom/rooms/rooms.c').read_text()
   start=src.index('#ifdef ROOMS_DISCRETE_MODE')

@@ -115,6 +115,18 @@ clone. Hardware validation is pending.
 Build with `python3 src/custom/rainbow/build.py`; this writes
 `dist/Rainbow.ZDL`.
 
+### Experimental addition: SpaceRev
+
+[SpaceRev](src/custom/spacerev/) is an original approximation inspired by the
+DigiTech XP-300 Space Station Reverse mode. It captures stereo grains and plays
+them backwards. Expression sets the base reverse-grain length; Rate and Depth
+control a triangle LFO that modulates the expression value. Mix blends the
+reversed grains with the live input. It does not clone the XP-300 algorithm or
+use a physical expression pedal input. Hardware validation is pending.
+
+Build with `python3 src/custom/spacerev/build.py`; this writes
+`dist/SpaceRev.ZDL`.
+
 ### Release pack samples
 
 All **22 effects now have samples**. Open a WAV link to play or download it.

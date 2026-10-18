@@ -38,6 +38,12 @@ class Selectors(unittest.TestCase):
                    ['Pitch','Primary','Tracking','Tone','Secondary','Magic'])
   self.assertEqual(effect['params'][4]['name'],'Secondary')
   self.assertEqual(__import__('parameter_display').pedal_name('Rainbow','Secondary'),'Second')
+ def test_spacerev_expression_lfo_controls(self):
+  db=json.loads((ROOT/'tools/effects_db.json').read_text())
+  effect=next(e for e in db['custom'] if e['name']=='SpaceRev')
+  self.assertEqual([p['name'] for p in effect['params']],
+                   ['Expression','Rate','Depth','Mix'])
+  self.assertEqual(__import__('parameter_display').pedal_name('SpaceRev','Expression'),'Expr')
  def test_rooms6_matches_actual_dsp_selector(self):
   src=(ROOT/'src/custom/rooms/rooms.c').read_text()
   start=src.index('#ifdef ROOMS_DISCRETE_MODE')

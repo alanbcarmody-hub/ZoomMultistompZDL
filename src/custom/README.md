@@ -14,6 +14,7 @@ Current custom effects:
 | [bloom/](bloom/) | Experimental Midiverb II Bloom-patch-inspired diffuse reverb with a transient-swelling wet attack. Original approximation; hardware validation pending. |
 | [shallow/](shallow/) | Experimental Shallow Water-inspired random-delay modulation with Rate, Depth, Sensitivity, Noise, and Mix controls. Original approximation; hardware validation pending. |
 | [rainbow/](rainbow/) | Experimental Rainbow Machine-inspired dual-voice pitch-warping effect with Pitch, Primary, Tracking, Tone, Secondary, and Magic controls. Original approximation; hardware validation pending. |
+| [spacerev/](spacerev/) | Experimental Space Station Reverse-mode-inspired reverse grains with LFO-modulated Expression and Rate, Depth, and Mix controls. Original approximation; hardware validation pending. |
 
 Before adding a new custom effect, read
 [../../docs/SAFE-DSP-RULES.md](../../docs/SAFE-DSP-RULES.md). Keep the first

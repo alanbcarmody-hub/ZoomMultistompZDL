@@ -11,6 +11,7 @@ PEDAL_NAMES={
  'Rainbow':{'Secondary':'Second'},
  'Shatter':{'Chance':'Chnce'},
  'Shallow':{'Sensitivity':'Sensitiv'},
+ 'SpaceRev':{'Expression':'Expr'},
  'Spiral':{'Feedbk':'Feed'},
  'Spool':{'Flutter':'Flutr','Spring':'Sprng'},
  'Stasis':{'Length':'Len','Capture':'Capt'},

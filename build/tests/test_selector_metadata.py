@@ -44,6 +44,10 @@ class Selectors(unittest.TestCase):
   self.assertEqual([p['name'] for p in effect['params']],
                    ['Expression','Rate','Depth','Mix'])
   self.assertEqual(__import__('parameter_display').pedal_name('SpaceRev','Expression'),'Expr')
+ def test_space2_fifth_shimmer_controls(self):
+  db=json.loads((ROOT/'tools/effects_db.json').read_text())
+  effect=next(e for e in db['custom'] if e['name']=='Space2')
+  self.assertEqual([p['name'] for p in effect['params']],['Fifth','Decay','Tone','Mix'])
  def test_rooms6_matches_actual_dsp_selector(self):
   src=(ROOT/'src/custom/rooms/rooms.c').read_text()
   start=src.index('#ifdef ROOMS_DISCRETE_MODE')

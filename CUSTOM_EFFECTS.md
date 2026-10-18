@@ -127,6 +127,17 @@ use a physical expression pedal input. Hardware validation is pending.
 Build with `python3 src/custom/spacerev/build.py`; this writes
 `dist/SpaceRev.ZDL`.
 
+### Experimental addition: Space2
+
+[Space2](src/custom/space2/) is a separate original approximation inspired by
+patch 2 of the DigiTech XP-300 Space Station, described as a shimmer reverb
+with added fifths. A fifth-up pitch voice feeds a diffuse reverb. Fifth, Decay,
+Tone, and Mix shape the result. It is not a firmware or algorithm clone.
+Hardware validation is pending.
+
+Build with `python3 src/custom/space2/build.py`; this writes
+`dist/Space2.ZDL`.
+
 ### Release pack samples
 
 All **22 effects now have samples**. Open a WAV link to play or download it.

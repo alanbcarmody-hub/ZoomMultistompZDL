@@ -102,6 +102,19 @@ firmware clone. Hardware validation is pending.
 Build with `python3 src/custom/shallow/build.py`; this writes
 `dist/Shallow.ZDL`.
 
+### Experimental addition: Rainbow
+
+[Rainbow](src/custom/rainbow/) is an original approximation inspired by the
+EarthQuaker Devices Rainbow Machine. Pitch, Primary, Tracking, Tone, Secondary,
+and Magic map to the pedal's six knobs; dual delay-head voices create the
+pitch-warping harmonies and Magic controls regeneration. The effect's own
+enable control replaces the pedal's Activate footswitch; the momentary/latching
+Magic footswitch behavior is not reproduced. This is not a circuit or firmware
+clone. Hardware validation is pending.
+
+Build with `python3 src/custom/rainbow/build.py`; this writes
+`dist/Rainbow.ZDL`.
+
 ### Release pack samples
 
 All **22 effects now have samples**. Open a WAV link to play or download it.

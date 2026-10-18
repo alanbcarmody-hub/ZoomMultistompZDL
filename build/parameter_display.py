@@ -8,6 +8,7 @@ PEDAL_NAMES={
  'Howl':{'Annihil':'Anhil'},
  'Mangle':{'Feedbk':'Feed','Tremolo':'Trem'},
  'Oxide':{'Flutter':'Flutr','FlutSpd':'FlSpd','HeadBmp':'HBump','Output':'Out'},
+ 'Rainbow':{'Secondary':'Second'},
  'Shatter':{'Chance':'Chnce'},
  'Shallow':{'Sensitivity':'Sensitiv'},
  'Spiral':{'Feedbk':'Feed'},

@@ -31,6 +31,13 @@ class Selectors(unittest.TestCase):
   effect=next(e for e in db['custom'] if e['name']=='Shallow')
   self.assertEqual([p['name'] for p in effect['params']],['Rate','Depth','Sensitivity','Noise','Mix'])
   self.assertEqual([c['label'] for c in effect['params'][3]['choices']],['Off','On'])
+ def test_rainbow_machine_controls_and_short_pedal_label(self):
+  db=json.loads((ROOT/'tools/effects_db.json').read_text())
+  effect=next(e for e in db['custom'] if e['name']=='Rainbow')
+  self.assertEqual([p['name'] for p in effect['params']],
+                   ['Pitch','Primary','Tracking','Tone','Secondary','Magic'])
+  self.assertEqual(effect['params'][4]['name'],'Secondary')
+  self.assertEqual(__import__('parameter_display').pedal_name('Rainbow','Secondary'),'Second')
  def test_rooms6_matches_actual_dsp_selector(self):
   src=(ROOT/'src/custom/rooms/rooms.c').read_text()
   start=src.index('#ifdef ROOMS_DISCRETE_MODE')

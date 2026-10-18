@@ -57,6 +57,13 @@ class Selectors(unittest.TestCase):
                    ['Unis','-1Oct','-2Oct'])
   self.assertEqual([c['label'] for c in effect['params'][2]['choices']],
                    ['Unis','5th','Oct','4th','-Oct','12th'])
+ def test_particle_granular_modes_and_controls(self):
+  db=json.loads((ROOT/'tools/effects_db.json').read_text())
+  effect=next(e for e in db['custom'] if e['name']=='Particle')
+  self.assertEqual([p['name'] for p in effect['params']],
+                   ['Mode','Size','Density','Delay','Feedback','Mix'])
+  self.assertEqual([c['label'] for c in effect['params'][0]['choices']],
+                   ['Rand','Dens','LFO','RPit','Rev','Det','DPit','LPit'])
  def test_rooms6_matches_actual_dsp_selector(self):
   src=(ROOT/'src/custom/rooms/rooms.c').read_text()
   start=src.index('#ifdef ROOMS_DISCRETE_MODE')

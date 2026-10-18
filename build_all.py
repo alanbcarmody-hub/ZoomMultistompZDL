@@ -83,6 +83,7 @@ EXPERIMENTAL_PLUGINS = [
     ("rainbow", CUSTOM_DIR / "rainbow" / "build.py"),
     ("spacerev", CUSTOM_DIR / "spacerev" / "build.py"),
     ("space2", CUSTOM_DIR / "space2" / "build.py"),
+    ("particle", CUSTOM_DIR / "particle" / "build.py"),
 ]
 PLUGINS = RELEASE_PLUGINS + DIAGNOSTIC_PLUGINS + EXPERIMENTAL_PLUGINS
 

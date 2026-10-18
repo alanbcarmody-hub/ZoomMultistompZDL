@@ -19,6 +19,10 @@ def groups(labels, classify, maximum=100):
     return result
 
 SELECTORS={
+ 'Particle':{
+   'Mode':groups(['Rand','Dens','LFO','RPit','Rev','Det','DPit','LPit'],
+                 lambda r:ladder(r,[.125,.25,.375,.5,.625,.75,.875])),
+ },
  'Corrupt':{
    'Master':groups(['Unis','-1Oct','-2Oct'],lambda r:ladder(r,[.25,.75])),
    'Harm':groups(['Unis','5th','Oct','4th','-Oct','12th'],lambda r:ladder(r,[.17,.34,.5,.67,.84])),

@@ -75,6 +75,18 @@ Build with `python3 src/custom/beatrep/build.py`; this writes
 `dist/BeatRpt.ZDL`. The TI C6000 compiler is required, as for the release
 effects.
 
+### Experimental addition: Particle
+
+[Particle](src/custom/particle/) is an original granular-delay and pitch-texture
+approximation inspired by Red Panda Particle 2. Its eight modes cover random,
+density, LFO, random-pitch, reverse, detune, density-pitch, and LFO-pitch
+textures. Size, Density, Delay, Feedback, and Mix shape the grain engine.
+Stereo processing, tap/MIDI sync, the freeze footswitch, and hidden expert
+parameters are not modeled. Hardware validation is pending.
+
+Build with `python3 src/custom/particle/build.py`; this writes
+`dist/Particle.ZDL`.
+
 ### Experimental addition: BeatScat
 
 [BeatScat](src/custom/beatscat/) is a separate, original beat-scatter effect

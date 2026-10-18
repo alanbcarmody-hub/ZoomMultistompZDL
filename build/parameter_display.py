@@ -7,6 +7,7 @@ PEDAL_NAMES={
  'Galactic':{'Replace':'Repl','Bright':'Brght','Detune':'Detun','Bigness':'Size'},
  'Howl':{'Annihil':'Anhil'},
  'Mangle':{'Feedbk':'Feed','Tremolo':'Trem'},
+ 'Particle':{'Density':'Dens','Feedback':'Feed'},
  'Oxide':{'Flutter':'Flutr','FlutSpd':'FlSpd','HeadBmp':'HBump','Output':'Out'},
  'Rainbow':{'Secondary':'Second'},
  'Shatter':{'Chance':'Chnce'},

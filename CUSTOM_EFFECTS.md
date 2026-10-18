@@ -54,6 +54,54 @@ Manager thumbnail. `dist/Tonic.ZDL` is available for local testing; hardware
 validation is pending, so it is not yet part of the 22-effect release pack.
 Rewire and its saved-patch controls are unchanged.
 
+### Experimental addition: BeatRpt
+
+[BeatRpt](src/custom/beatrep/) repeats the previous tempo-synced slice. Set
+Length to 1/32, 1/16, 1/8, or 1/4 note and BPM from 40 to 240. Mode selects
+continuous repeats, one repeat when the effect is switched on, or one repeated
+slice every four beats. In Manual mode, switch the effect off and on to trigger
+another slice. The stereo ring caps slices at 32,768 frames (about 0.74 s),
+so the 1/4 setting is shortened at the slowest BPM values. It is experimental
+and not hardware-validated.
+
+Build with `python3 src/custom/beatrep/build.py`; this writes
+`dist/BeatRpt.ZDL`. The TI C6000 compiler is required, as for the release
+effects.
+
+### Experimental addition: BeatScat
+
+[BeatScat](src/custom/beatscat/) is a separate, original beat-scatter effect
+inspired by live beat-repeat tools. Div and BPM set the grid; Type selects
+stutter, reverse, or quarter-shifted playback; Pattern selects every division,
+alternating divisions, or the opposite-phase alternation. It triggers
+automatically while enabled. The longest slice is capped at 32,768 frames.
+Hardware validation is pending.
+
+Build with `python3 src/custom/beatscat/build.py`; this writes
+`dist/BeatScat.ZDL`.
+
+### Experimental addition: Bloom
+
+[Bloom](src/custom/bloom/) is an original approximation inspired by the Alesis
+Midiverb II Bloom patch, not a bit-exact emulation or factory algorithm dump.
+It combines a diffuse stereo reverb tail with a controllable swell on the wet
+attack. Bloom controls the swell speed; Decay, Tone, and Mix shape the tail.
+Hardware validation is pending.
+
+Build with `python3 src/custom/bloom/build.py`; this writes
+`dist/Bloom.ZDL`.
+
+### Experimental addition: Shallow
+
+[Shallow](src/custom/shallow/) is an original approximation inspired by the
+Fairfield Circuitry Shallow Water. Rate, Depth, and Sensitivity shape a
+dynamics-responsive random delay modulation; Noise toggles subtle noise on
+the wet signal, and Mix controls the dry/wet balance. This is not a circuit or
+firmware clone. Hardware validation is pending.
+
+Build with `python3 src/custom/shallow/build.py`; this writes
+`dist/Shallow.ZDL`.
+
 ### Release pack samples
 
 All **22 effects now have samples**. Open a WAV link to play or download it.

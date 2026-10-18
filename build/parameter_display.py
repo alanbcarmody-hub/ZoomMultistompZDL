@@ -9,6 +9,7 @@ PEDAL_NAMES={
  'Mangle':{'Feedbk':'Feed','Tremolo':'Trem'},
  'Oxide':{'Flutter':'Flutr','FlutSpd':'FlSpd','HeadBmp':'HBump','Output':'Out'},
  'Shatter':{'Chance':'Chnce'},
+ 'Shallow':{'Sensitivity':'Sensitiv'},
  'Spiral':{'Feedbk':'Feed'},
  'Spool':{'Flutter':'Flutr','Spring':'Sprng'},
  'Stasis':{'Length':'Len','Capture':'Capt'},

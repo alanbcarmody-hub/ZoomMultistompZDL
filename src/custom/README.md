@@ -9,6 +9,10 @@ Current custom effects:
 | Effect | Notes |
 |---|---|
 | [ott/](ott/) | OTT-style 3-band upward/downward compressor with `DryWet`, `Time`, `Output`, and `SplitFrq`. Not an Ableton port. |
+| [beatrep/](beatrep/) | Experimental BPM-synced beat repeat with continuous, manual one-shot, and four-beat automatic modes. Hardware validation pending. |
+| [beatscat/](beatscat/) | Experimental BPM-grid beat scatter with stutter, reverse, or slice-shift treatments and every/alternate/syncopated trigger patterns. Hardware validation pending. |
+| [bloom/](bloom/) | Experimental Midiverb II Bloom-patch-inspired diffuse reverb with a transient-swelling wet attack. Original approximation; hardware validation pending. |
+| [shallow/](shallow/) | Experimental Shallow Water-inspired random-delay modulation with Rate, Depth, Sensitivity, Noise, and Mix controls. Original approximation; hardware validation pending. |
 
 Before adding a new custom effect, read
 [../../docs/SAFE-DSP-RULES.md](../../docs/SAFE-DSP-RULES.md). Keep the first

@@ -74,7 +74,13 @@ DIAGNOSTIC_PLUGINS = [
 ]
 
 # Explicit builds only until hardware listening confirms these effects.
-EXPERIMENTAL_PLUGINS = [("tonic", CUSTOM_DIR / "tonic" / "build.py")]
+EXPERIMENTAL_PLUGINS = [
+    ("tonic", CUSTOM_DIR / "tonic" / "build.py"),
+    ("beatrep", CUSTOM_DIR / "beatrep" / "build.py"),
+    ("beatscat", CUSTOM_DIR / "beatscat" / "build.py"),
+    ("bloom", CUSTOM_DIR / "bloom" / "build.py"),
+    ("shallow", CUSTOM_DIR / "shallow" / "build.py"),
+]
 PLUGINS = RELEASE_PLUGINS + DIAGNOSTIC_PLUGINS + EXPERIMENTAL_PLUGINS
 
 

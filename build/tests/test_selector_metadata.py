@@ -26,6 +26,11 @@ class Selectors(unittest.TestCase):
       for raw in range(choice['from'],choice['to']+1):
        buf=ctypes.create_string_buffer(b'XXXXXXXXZ',10);n=fn(raw,buf)
        self.assertEqual(buf.value.decode(),pedal_label(choice['label']));self.assertEqual(n,len(pedal_label(choice['label'])));self.assertEqual(buf.raw[8],ord('Z'))
+ def test_shallow_water_control_names_and_noise_toggle(self):
+  db=json.loads((ROOT/'tools/effects_db.json').read_text())
+  effect=next(e for e in db['custom'] if e['name']=='Shallow')
+  self.assertEqual([p['name'] for p in effect['params']],['Rate','Depth','Sensitivity','Noise','Mix'])
+  self.assertEqual([c['label'] for c in effect['params'][3]['choices']],['Off','On'])
  def test_rooms6_matches_actual_dsp_selector(self):
   src=(ROOT/'src/custom/rooms/rooms.c').read_text()
   start=src.index('#ifdef ROOMS_DISCRETE_MODE')
